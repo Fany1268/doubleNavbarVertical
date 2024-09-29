@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertikální navigace - Pravá a Levá lišta</title>
+
+    <!-- Přidání Font Awesome z CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        /* Levá navigační lišta */
+        .navbar-left {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-right: 0px solid #333;/*odstraněna pravá část rámečku navigační lišty*/
+            height: 100vh; /* Výška nastavena na celou obrazovku */
+            width: 200px; /* Šířka levé navigace */
+            box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .navbar-left ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .navbar-left li {
+            margin-bottom: 20px;
+        }
+        .navbar-left a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 5px 0;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        .navbar-left a:hover {
+            border-bottom: 4px solid #333;
+            color: #000;
+        }
+
+        /* Pravá navigační lišta */
+        .navbar-right {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-left: 2px solid #333;
+            height: 100vh; /* Výška nastavena na celou obrazovku */
+            width: 200px; /* Šířka pravé navigace */
+            box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            right: 0; /* Pravá strana */
+        }
+        .navbar-right ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .navbar-right li {
+            margin-bottom: 20px;
+        }
+        .navbar-right a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 5px 0;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        .navbar-right a:hover {
+            /*border-left: 0px solid #333;*/ /*odstraněna levá čára rámeču*/
+            color: #000;
+
+            margin-left: 10px;              /*butony jakoby tancují*/
+        }
+
+        /* Přidáme odsazení pro obsah, aby nebyl pod navigací */
+        .content {
+            margin-left: 220px; /* Udržení mezery pro levou navigační lištu */
+            margin-right: 220px;
+            padding: 20px;
+            padding-left: 40px; /* Odsazení od pravé části levé navigace */
+        }
+
+        /*footer*/
+
+        footer {
+            background-color: rgb(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            margin: 10px 0;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+        }
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Levá navigační lišta -->
+<div class="navbar-left">
+    <ul>
+        <li><a href="#" class="active">Domů</a></li>
+        <li><a href="#">O nás</a></li>
+        <li><a href="#">Galerie</a></li>
+    </ul>
+</div>
+
+<!-- Pravá navigační lišta s tlačítkem Kontakt nahoře -->
+<div class="navbar-right">
+    <ul>
+        <li><a href="#">Kontakt</a></li> <!-- Tlačítko Kontakt je nyní nahoře v pravé liště -->
+        <li><a href="#">Další stránka</a></li>
+        <li><a href="#">Informace</a></li>
+    </ul>
+</div>
+
+<!-- Obsah stránky -->
+<div class="content">
+    <h1>Obsah stránky</h1>
+    <p>Zde je ukázka obsahu stránky, který se nachází mezi levou a pravou navigací.</p>
+</div>
+
+
+
+<!-- Footer s odkazy na sociální sítě s ikonami -->
+<footer>
+    <p>Sledujte nás na sociálních sítích:</p>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
